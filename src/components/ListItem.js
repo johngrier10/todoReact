@@ -25,7 +25,9 @@ const ListItem = ({todo, id, checkComplete, handleEditTodos}) => {
       return( 
 
         <li>
-          <input type="text" name="editValue" id="editValue" 
+          <input 
+          type="text"
+          id="editValue" 
           value={editValue}
           name="editValue" 
           onChange={e =>setEditValue(e.target.value.toLocaleLowerCase())}/>          

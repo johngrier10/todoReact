@@ -24,6 +24,7 @@ export default function TodoList (){
                 todo.name = editValue
             }
         })
+        setTodos(newTodos)
     }
 
     return (
