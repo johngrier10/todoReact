@@ -15,6 +15,16 @@ const TodoFooter = () => {
         setTodos(newTodos)
         setCheckAll(!checkAll)
     }
+
+    const deleteTodo = () =>{
+        const newTodos = todos.filter(todo =>{
+            return todo.complete === false
+        })
+        setTodos(newTodos)
+        setCheckAll(checkAll)
+    }
+
+
     return (
     <div>
         <label htmlFor="all">
@@ -24,7 +34,7 @@ const TodoFooter = () => {
             ALL
         </label>
         <p>You have {todos.length} Todos to do.</p>
-        <button id="delete">Delete</button>
+        <button id="delete" onClick={deleteTodo}>Delete</button>
     </div>
     )
 }
